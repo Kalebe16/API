@@ -7,7 +7,7 @@ app.config['JSON_AS_ASCII'] = False
 @app.route("/")
 def homepage():
     
-    return "A API está no ar, digite '/search/palavra_continua' na sua barra de pesquisa para acessar a API."
+    return '<h2>A API está no ar, digite "/alguma_palavra_qualquer" na sua barra de pesquisa para acessar a API, ou faça uma requisição http para este link.</h2><h3>Esta API converte algarismos romanos em inteiros ou retorna o maior algarismo/valor encontrado em uma palavra ou frase, você escolhe!</h3>'
 
 
 # RECEBE UMA PALAVRA E RETORNA O MAIOR ALGARISMO ROMANO ENCONTRADO
@@ -70,7 +70,7 @@ def search(alfanumericos):
 
     
     
-    return jsonify({"requisição": resposta}, {"value": value}, {"number": number})
+    return jsonify({"requisição": resposta}, {"value": value, "number": number})
             
 
 
